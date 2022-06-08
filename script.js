@@ -1,12 +1,21 @@
 let ul;
+let shoppingList = [
+    "Mleko",
+    "Jajka",
+    "Masło", 
+    "Jogurt", 
+    "Bułka"
+]
 
 document.addEventListener('DOMContentLoaded', () => {
     ul = document.getElementById('shoppingList');
-    addListItem();
+    for (let shoppingProduct of shoppingList) {
+        addListItem(shoppingProduct)
+    }
 })
 
-function addListItem() {
+function addListItem(shoppingProduct) {
     let li = document.createElement('li');
-    li.innerText = "test";
+    li.innerText = shoppingProduct;
     ul.appendChild(li);
 }
