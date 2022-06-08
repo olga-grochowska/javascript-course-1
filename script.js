@@ -1,21 +1,31 @@
 let ul;
+let newItemForm;
+
 let shoppingList = [
     "Mleko",
     "Jajka",
-    "Masło", 
-    "Jogurt", 
+    "Masło",
+    "Jogurt",
     "Bułka"
 ]
 
 document.addEventListener('DOMContentLoaded', () => {
     ul = document.getElementById('shoppingList');
-    for (let shoppingProduct of shoppingList) {
-        addListItem(shoppingProduct)
+    newItemForm = document.getElementById('newItemForm');
+
+    newItemForm.addEventListener('submit', (event) => {
+        event.preventDefault();
+        
+        console.log(event);
+    })
+
+    for (let shoppingItem of shoppingList) {
+        addListItem(shoppingItem)
     }
 })
 
-function addListItem(shoppingProduct) {
+function addListItem(shoppingItem) {
     let li = document.createElement('li');
-    li.innerText = shoppingProduct;
+    li.innerText = shoppingItem;
     ul.appendChild(li);
 }

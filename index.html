@@ -13,10 +13,21 @@
 <body>
 
     <div class="container">
+
         <h1>Lista zakupów</h1>
+
+        <form id="newItemForm">
+            <!-- <label for="shoppingItem">Nazwa produktu:</label> -->
+            <input placeholder="Podaj nazwę produktu" type="text" name="shoppingItem" id="shoppingItem">
+
+            <button class="btn btn-success" type="submit">DODAJ</button>
+
+        </form>
+
         <ul id="shoppingList">
-            
+
         </ul>
+
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
