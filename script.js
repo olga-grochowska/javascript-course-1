@@ -15,8 +15,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
     newItemForm.addEventListener('submit', (event) => {
         event.preventDefault();
+        let input = event.target.elements[0];
         
-        console.log(event);
+        addListItem(input.value);
+
+        input.value = "";
     })
 
     for (let shoppingItem of shoppingList) {
