@@ -5,3 +5,13 @@
 .form-group {
     margin-bottom: 10px;
 }
+
+.input-danger {
+    border: 3px solid red;
+    color: red;
+}
+
+.input-info-danger {
+    color: red;
+    font-size: 12px;
+}
