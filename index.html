@@ -7,26 +7,52 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
     <title>Document</title>
 </head>
 
 <body>
 
-    <div class="container">
+    <nav class="navbar navbar-expand-lg bg-light">
+        <div class="container">
+            <a class="navbar-brand" href="#">My list</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+                aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+                    <a class="nav-link active" aria-current="page" href="#">Shopping list</a>
+                    <a class="nav-link disabled">Second Project</a>
+                </div>
+            </div>
+        </div>
+    </nav>
 
-        <h1>Lista zakupów</h1>
+    <div class="container list-wrapper">
 
-        <form id="newItemForm">
-            <!-- <label for="shoppingItem">Nazwa produktu:</label> -->
-            <input placeholder="Podaj nazwę produktu" type="text" name="shoppingItem" id="shoppingItem">
+        <div class="row">
+            <h1>Lista zakupów</h1>
 
-            <button class="btn btn-success" type="submit">DODAJ</button>
+            <div class="col-4">
+                <form id="newItemForm">
 
-        </form>
+                    <div class="form-group">
+                        <!-- <label for="shoppingItem">Nazwa produktu:</label> -->
+                        <input placeholder="Podaj nazwę produktu" type="text" name="shoppingItem" id="shoppingItem">
+                    </div>
 
-        <ul id="shoppingList">
+                    <button class="btn btn-success" type="submit">DODAJ</button>
+                </form>
+            </div>
 
-        </ul>
+            <div class="col-8">
+                <ul id="shoppingList">
+
+                </ul>
+            </div>
+
+        </div>
 
     </div>
 
