@@ -22,8 +22,8 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                 <div class="navbar-nav">
-                    <a class="nav-link active" aria-current="page" href="#">Shopping list</a>
-                    <a class="nav-link" href="todo.html">Todo</a>
+                    <a class="nav-link" href="index.html">Shopping list</a>
+                    <a class="nav-link active" aria-current="page" href="#">Todo</a>
                 </div>
             </div>
         </div>
@@ -32,15 +32,21 @@
     <div class="container list-wrapper">
 
         <div class="row">
-            <h1>Lista zakupów</h1>
+            <h1>Todo list</h1>
 
             <div class="col-4">
-                <form id="newItemForm">
+                <form id="todoForm">
 
                     <div class="form-group">
-                        <!-- <label for="shoppingItem">Nazwa produktu:</label> -->
-                        <input placeholder="Podaj nazwę produktu" type="text" name="shoppingItem" id="shoppingItem">
-                        <span class="input-info-danger" id="inputError"></span>
+                        <label for="shoppingItem">Nazwa zadania:</label>
+                        <input type="text" name="todoName" id="todoName">
+                        <span class="input-info-danger" id="todoNameError"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="shoppingItem">Opis:</label>
+                        <input type="text" name="todoDesk" id="todoDesk">
+                        <span class="input-info-danger" id="todoDeskError"></span>
                     </div>
 
                     <button class="btn btn-success" type="submit">DODAJ</button>
@@ -48,7 +54,7 @@
             </div>
 
             <div class="col-8">
-                <ul id="shoppingList">
+                <ul id="todoList">
 
                 </ul>
             </div>
@@ -66,7 +72,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.min.js"
         integrity="sha384-kjU+l4N0Yf4ZOJErLsIcvOU2qSb74wXpOhqTvwVx3OElZRweTnQ6d31fXEoRD1Jy"
         crossorigin="anonymous"></script>
-    <script src="shoppingList.js"></script>
+    <script src="todo.js"></script>
 </body>
 
 </html>
