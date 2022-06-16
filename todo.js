@@ -5,9 +5,11 @@ let todoList = []
 
 document.addEventListener('DOMContentLoaded', () => {
     ul = document.getElementById('todoList');
-    newTodoForm = document.getElementById('todoForm');
+    todoForm = document.getElementById('todoForm');
+    todoNameError = document.getElementById('todoNameError'); 
+    todoDescError = document.getElementById('todoDescError');
 
-    newTodoForm.addEventListener('submit', (event) => {
+    todoForm.addEventListener('submit', (event) => {
         event.preventDefault();
         let todoName = event.target.elements[0];
         let todoDesc = event.target.elements[1];
@@ -20,8 +22,27 @@ document.addEventListener('DOMContentLoaded', () => {
             }
 
             todoList.push(todo); 
+
+            console.log(todoList);
         } else {
-            
+            if (todoName.value.length < 3) {
+                todoName.classList.add('input-danger');
+                todoNameError.innerText = "Nazwa jest za krótka (min. 3 znaki)!";
+            }            
+            if (todoDesc.value.length < 21) {
+                todoDesc.classList.add('input-danger');
+                todoDescError.innerText = "Opis jest za krótki (min. 20 znaków)!";
+            }
+        }
+
+        if (todoName.value.length > 2) {
+            todoName.classList.remove('input-danger');
+            todoNameError.innerText = "";
+        }
+
+        if (todoDesc.value.length > 20) {
+            todoDesc.classList.remove('input-danger');
+            todoDescError.innerText = "";
         }
     })
 })
