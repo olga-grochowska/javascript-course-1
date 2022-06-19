@@ -1,7 +1,7 @@
 let ul;
 let todoForm;
 
-let todoList = []
+let todoList = [];
 
 document.addEventListener('DOMContentLoaded', () => {
     ul = document.getElementById('todoList');
@@ -15,15 +15,28 @@ document.addEventListener('DOMContentLoaded', () => {
         let todoDesc = event.target.elements[1];
 
         if (todoName.value.length > 2 && todoDesc.value.length > 20) {
-            let todo = {
+            let newTodo = {
                 name: todoName.value,
                 desc: todoDesc.value,
                 done: false
             }
 
-            todoList.push(todo); 
+            for (let todo of todoList) {
+                if (todo.name === todoName.value && todo.desc === todoDesc.value) {
+                    return;
+                }
+            }
 
+            todoList.push(newTodo); 
             console.log(todoList);
+
+            ul.innerHTML = "";
+
+            for (let todo of todoList) {
+                let li = document.createElement('li');
+                li.innerText = todo.name; 
+                ul.appendChild(li);
+            }
         } else {
             if (todoName.value.length < 3) {
                 todoName.classList.add('input-danger');
