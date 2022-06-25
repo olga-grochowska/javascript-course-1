@@ -34,26 +34,23 @@
         <div class="row">
             <h1>Todo list</h1>
 
-            <div class="col-6">
+            <div class="col-4">
                 <form id="todoForm">
-
-                    <div class="form-group">
-                        <label for="todoName">Nazwa zadania:</label>
-                        <input type="text" name="todoName" id="todoName">
-                        <span class="input-info-danger" id="todoNameError"></span>
+                    <div class="mb-3">
+                        <label for="todoName" class="form-label">Nazwa zadania:</label>
+                        <input type="text" class="form-control" id="todoName">
+                        <div id="todoNameError" class="form-text input-info-danger"></div>
                     </div>
-
-                    <div class="form-group">
-                        <label for="todoDesc">Opis:</label>
-                        <textarea type="text" name="todoDesc" id="todoDesk"></textarea>
-                        <span class="input-info-danger" id="todoDescError"></span>
+                    <div class="mb-3">
+                        <label for="todoDesc" class="form-label">Opis:</label>
+                        <textarea class="form-control" id="todoDesc"></textarea>
+                        <div id="todoDescError" class="form-text input-info-danger"></div>
                     </div>
-
-                    <button class="btn btn-success" type="submit">DODAJ</button>
+                    <button type="submit" class="btn btn-primary">ADD</button>
                 </form>
             </div>
 
-            <div class="col-6">
+            <div class="col-8">
                 <ul class="list-group" id="todoList">
 
                 </ul>

@@ -95,5 +95,13 @@ const renderList = () => {
 }
 
 const changeTaskStatus = (event) => {
-    return;
+    let todo = todoList[Math.round(event.target.dataset.taskId)];
+
+    if (todo.done === true) {
+        todo.done = false;
+    } else {
+        todo.done = true;
+    }
+
+    renderList();
 }
